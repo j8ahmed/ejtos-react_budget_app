@@ -10,11 +10,11 @@ const Budget = () => {
     const handleBudgetChange = (event) => {
         const val =  event.target.value
         if(val > upperLimit) {
-            alert(`${val} £ is too high. The budget value cannot exceed ${upperLimit} £`);
+            alert(`${val} ${currency} is too high. The budget value cannot exceed ${upperLimit} ${currency}`);
             return;
         } else if (val < totalExpenses) {
             const minval = val === "" && 0;
-            alert(`${minval} £ is too low. The budget value cannot be less than the total expenses (${totalExpenses}) £`);
+            alert(`${minval} ${currency} is too low. The budget value cannot be less than the total expenses (${totalExpenses} ${currency})`);
             return;
         }else {
             setNewBudget(val);
