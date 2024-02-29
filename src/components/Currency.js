@@ -25,11 +25,11 @@ export default function Currency() {
     }
     return (
         <div className='alert alert-secondary'>
-            <label for="currency-selector">Select a Currency:</label>
+            <label htmlFor="currency-selector">Select a Currency:</label>
             <select id="currency-selector" name="currency" value={currency} onChange={handleChange}
                 style={{width: "100%"}}
             >
-                <option value={currency} selected>Currency ({currencyOptions[currency]})</option>
+                <option value={currency}>Currency ({currencyOptions[currency]})</option>
                 {
                     Object.keys(currencyOptions).map((key, i) => (
                         <option key={i} value={key}>{currencyOptions[key]}</option>
